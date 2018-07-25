@@ -1,5 +1,8 @@
 package com.asiainfo.boot.controller;
 
+import com.asiainfo.boot.service.VelocityService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +24,14 @@ public class FirstApplicationController {
 
 	private static final int SIX = 6;
 
+	@Autowired
+	private VelocityService velocityService;
+	/**
+	 * @Value("vm.path") 赋值为 vm.path
+	 * @Value("${vm.path}") 赋值为 配置文件中的 vm.path对应的值
+	 */
+	@Value("${vm.path}")
+	private String vmPath;
 	@RequestMapping(value = "/test/helloWorld", method = RequestMethod.GET)
 	public String sayHelloWorld(){
 
@@ -34,6 +45,9 @@ public class FirstApplicationController {
 				res = res.append((char) (random.nextInt(26) + temp));
 			}
 		}
+
+		res = res.append("------").append(velocityService.getMessageByVm(vmPath, new String[]{"老鲍", "sunyelw"}));
+
 		return res.toString();
 	}
 
