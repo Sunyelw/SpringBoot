@@ -1,10 +1,8 @@
-package com.asiainfo.boot.controller;
+package com.asiainfo.boot.practice;
 
 import org.apache.commons.lang.StringUtils;
 
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 /**
  * 项目名称:   pinkstone
@@ -18,6 +16,9 @@ public class MainClass {
 
 
 	public static void main(String[] args) {
+
+		List<String> list = new ArrayList<>();
+		list.add("a");
 
 		System.out.println(getSms(8));
 
