@@ -1,0 +1,13 @@
+#生产环境
+
+#启动端口=8090
+server:
+  port: 8081
+
+#vm文件路径
+vm:
+  path: template/a.vm
+
+#定时时间
+time:
+  schedule: 3000
