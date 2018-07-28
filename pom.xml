@@ -94,6 +94,13 @@
             <artifactId>jedis</artifactId>
         </dependency>
 
+		<!-- 监控工具 -->
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
         <!-- fastJson -->
         <dependency>
             <groupId>com.alibaba</groupId>

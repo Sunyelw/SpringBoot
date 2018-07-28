@@ -27,9 +27,15 @@ spring:
 
 #log配置
 logging:
-  file: /logger.log
+  file: logger.log
   level:
     root: info
     com.asiainfo.boot.service: debug
 
+#监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
