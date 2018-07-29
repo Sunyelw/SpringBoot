@@ -15,8 +15,8 @@ import java.util.Date;
  * 项目名称:   pinkstone
  * 包:        com.asiainfo.boot.controller
  * 类名称:     StudentController
- * 类描述:     student controller
- * 创建人:     huangyang
+ * 类描述:     For mybatis/log/redis/actuator
+ * 创建人:     HuangYang
  * 创建时间:   2018/7/28 22:39
  */
 @RestController

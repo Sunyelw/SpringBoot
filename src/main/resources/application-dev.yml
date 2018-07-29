@@ -38,4 +38,34 @@ management:
     web:
       exposure:
         include: '*'
-
+#============== kafka ===================
+# kafka consumer
+kafka:
+  consumer:
+    zookeeper:
+      connect: 127.0.0.1:2181
+    servers: 127.0.0.1:9092
+    enable:
+      auto:
+        commit: true
+    session:
+      timeout: 6000
+    auto:
+      commit:
+        interval: 100
+      offset:
+        reset: latest
+    topic: test
+    group:
+      id: test
+    concurrency: 10
+# kafka producer
+kafka:
+  producer:
+    servers: 127.0.0.1:9092
+    retries: 0
+    linger: 1
+    batch:
+      size: 4096
+    buffer:
+      memory: 40960
