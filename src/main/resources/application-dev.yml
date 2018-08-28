@@ -1,8 +1,8 @@
 #开发环境
 
 #启动端口=8090
-server:
-  port: 8080
+#server:
+#  port: 8090
 #vm文件路径
 vm:
   path: template/a.vm
@@ -60,7 +60,6 @@ kafka:
       id: test
     concurrency: 10
 # kafka producer
-kafka:
   producer:
     servers: 127.0.0.1:9092
     retries: 0

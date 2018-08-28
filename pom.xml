@@ -124,18 +124,28 @@
 
 	</dependencies>
 
+    <profiles>
+        <profile>
+            <id>test</id>
+            <activation>
+                <property>
+                    <name>env</name>
+                    <value>test</value>
+                </property>
+            </activation>
+        </profile>
+    </profiles>
+
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+
+                <configuration>
+                    <jvmArguments>-Dfile.encoding=utf-8</jvmArguments>
+                </configuration>
 			</plugin>
-            <!--&lt;!&ndash; mvnw 保持maven版本一致性工具 命令：mvn wrapper:wrapper ；使用mvnw代替mvn执行 &ndash;&gt;-->
-            <!--<plugin>-->
-                <!--<groupId>com.rimerosolutions.maven.plugins</groupId>-->
-                <!--<artifactId>wrapper-maven-plugin</artifactId>-->
-                <!--<version>${wrapper-maven-plugin.version}</version>-->
-            <!--</plugin>-->
 		</plugins>
 	</build>
 

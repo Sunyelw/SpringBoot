@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: springboot-application
+  cloud:
+    config:
+      name: hy-springboot-application
+      uri: https://gitee.com/Sunyelw/springcloud-config.git
+      profile: tst
+      label: master
+      failFast: true
